@@ -34,12 +34,18 @@ namespace ConceitosPOO
 
         public void Deposito(decimal valor)
         {
-
+            if (valor > 0)
+                this.Saldo += valor; //saldo = saldo + valor;
+            else
+                throw new ArgumentException("O valor tem que ser positivo");
         }
 
         public void Saque(decimal valor) 
         {
-            
+            if (valor > 0)
+                this.Saldo += valor; //saldo = saldo + valor;
+            else
+                throw new ArgumentException("O valor tem que ser positivo");
         }
     }
 }

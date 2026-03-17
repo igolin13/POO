@@ -33,4 +33,6 @@ conta.Saque(500);
 //exibir saldo
 Console.WriteLine($"A conta número {conta.Numero} possui saldo {conta.Saldo}");
 
+conta.Deposito(-100);
+
 //A partir do vídeo identifique as tecnologias utilizadas para o desenvolvimento das soluções apresentadas. Recomenda-se ler os artigos do blog relacionados ao vídeo.
