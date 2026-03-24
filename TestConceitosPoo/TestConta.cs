@@ -26,5 +26,46 @@ namespace TestConceitosPoo
             //verificação
             Assert.AreEqual(saldoEsperado, conta.Saldo);
         }
+
+
+        [TestMethod]
+        public void TestSaque()
+        {
+            //cenário
+            decimal saldoInicial = 1000;
+            decimal valorSaque = 500;
+            decimal saldoEsperado = 500;
+            Conta conta = new Conta(1111, saldoInicial);
+
+            //ação
+            conta.Saque(valorSaque);
+
+            //verificação
+            Assert.AreEqual(saldoEsperado, conta.Saldo);
+        }
+
+        [TestMethod]
+        public void TestTransferencia()
+        {
+            //cenario
+            decimal saldoInicialContaOrigem = 1000;
+            decimal saldoInicialContaDestino = 1000;
+            decimal valorTransferencia = 1000;
+            decimal saldoFinalContaOrigem = 0;
+            decimal saldoFinalContaDestino = 2000;
+            Conta contaOrigem, contaDestino;
+            contaOrigem = new Conta(1111, saldoInicialContaOrigem);
+            contaDestino = new Conta(2222, saldoInicialContaDestino);
+
+            //acao
+            contaOrigem.Transferencia(contaDestino, valorTransferencia);
+
+            //verificacao
+            Assert.AreEqual(saldoFinalContaOrigem, contaOrigem.Saldo);
+            Assert.AreEqual(saldoFinalContaDestino, contaDestino.Saldo);   
+
+        }
     }
+
+    
 }
