@@ -19,6 +19,14 @@ namespace ConceitosPOO
         private decimal _saldo;
         private Cliente _titular;
 
+        private Agencia _agencia;
+
+        public Agencia Agencia
+        {
+            get { return _agencia; }
+            set { _agencia = value; }
+        }
+
         public Cliente Titular
         {
             get { return _titular; }

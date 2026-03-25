@@ -11,6 +11,10 @@ namespace ConceitosPOO
         private int _numero;
         private string _nome;
         private string _telefone;
+
+
+
+
         public string Nome { 
             get => _nome;
             set
